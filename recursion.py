@@ -38,3 +38,15 @@ def towersOfHanoi(numberOfDisks, startPeg=1, endPeg=3):
 towersOfHanoi(numberOfDisks=4)
 
 print("------")
+print("Problem 2: given an array check whether the array is in sorted order with recursion")
+
+
+def isArrayInSortedOrder(A):
+    if len(A) == 1:
+        return True
+    return A[0] <= A[1] and isArrayInSortedOrder(A[1:])
+
+
+A = [127, 220, 246, 321, 454, 534, 565, 933]
+
+print(isArrayInSortedOrder(A))
